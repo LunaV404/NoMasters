@@ -1,0 +1,76 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff3333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff0000;
+}
+
+/* Button hover effect */
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+/* Card hover effect */
+.glass-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.1);
+}
+
+/* Text selection */
+::selection {
+    background: rgba(255, 0, 0, 0.2);
+    color: #fff;
+}
+
+/* Loading animation */
+.loading {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+}
+
+/* Mobile menu animation */
+@media (max-width: 768px) {
+    .menu-open {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+    .menu-closed {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Hero section parallax effect */
+.parallax {
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+}

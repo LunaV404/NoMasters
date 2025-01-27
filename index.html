@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoMasters - Réseau Social Révolutionnaire</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #ff3333 0%, #ff0000 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at center, rgba(255, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen">
+    <!-- Hero Section -->
+    <div class="hero-gradient relative overflow-hidden">
+        <header class="container mx-auto px-4 py-6">
+            <nav class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold gradient-text">NoMasters</h1>
+                <div class="space-x-6">
+                    <a href="#vision" class="hover:text-red-500 transition-colors">Vision</a>
+                    <a href="#features" class="hover:text-red-500 transition-colors">Fonctionnalités</a>
+                    <a href="#join" class="hover:text-red-500 transition-colors">Rejoindre</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container mx-auto px-4 py-20 text-center">
+            <h2 class="text-6xl font-bold mb-6 gradient-text animate-float">
+                Le Réseau Social<br>Révolutionnaire
+            </h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                Libérez-vous des chaînes numériques.<br>
+                Reprenez le contrôle de votre voix.
+            </p>
+            <a href="#join" class="inline-block bg-red-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Rejoindre la Révolution
+            </a>
+        </main>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4">🎬</div>
+                    <h3 class="text-xl font-bold mb-4">Vidéos Éducatives</h3>
+                    <p class="text-gray-400">Partagez vos connaissances et vos idées à travers des vidéos percutantes</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4">🤝</div>
+                    <h3 class="text-xl font-bold mb-4">Communauté Sans Hiérarchie</h3>
+                    <p class="text-gray-400">Pas de leaders, pas d'influenceurs - juste des camarades</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold mb-4">Vie Privée Garantie</h3>
+                    <p class="text-gray-400">Vos données vous appartiennent, point final</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-4xl font-bold mb-8 gradient-text">Notre Vision</h2>
+            <p class="text-xl text-gray-300 leading-relaxed">
+                NoMasters n'est pas qu'un simple réseau social - c'est un mouvement de libération numérique.
+                Un espace où chaque voix compte, où le partage de connaissances prime sur les algorithmes de profit.
+            </p>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="py-20 bg-black">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-8 gradient-text">Rejoignez le Mouvement</h2>
+            <div class="glass-card max-w-xl mx-auto p-8 rounded-2xl">
+                <p class="text-lg mb-8">
+                    Inscrivez-vous pour être parmi les premiers à rejoindre la révolution numérique
+                </p>
+                <form action="https://formspree.io/f/mpwqpyra" 
+                      method="POST"
+                      id="subscribeForm" 
+                      class="space-y-4">
+                    <input type="email" 
+                           id="email" 
+                           name="email" 
+                           placeholder="Votre email" 
+                           required
+                           class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-800 focus:border-red-500 focus:outline-none">
+                    <input type="hidden" name="_subject" value="Nouvelle inscription NoMasters">
+                    <input type="hidden" name="_next" value="https://yourusername.github.io/nomasters/thanks.html">
+                    <button type="submit" 
+                            id="submitBtn"
+                            class="w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                        Rejoindre la Liste d'Attente
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black border-t border-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-500">
+                2025 NoMasters. Tous droits libérés.
+            </p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-red-500">Manifeste</a>
+                <a href="#" class="text-gray-400 hover:text-red-500">GitHub</a>
+                <a href="#" class="text-gray-400 hover:text-red-500">Contact</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById('subscribeForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+            
+            // Désactiver le bouton pendant l'envoi
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi en cours...';
+            
+            try {
+                const response = await fetch('api/subscribe.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    formMessage.textContent = 'Merci ! Vous recevrez bientôt de nos nouvelles.';
+                    formMessage.className = 'text-sm mt-2 text-green-500';
+                    document.getElementById('email').value = '';
+                } else {
+                    throw new Error(data.error || 'Une erreur est survenue');
+                }
+            } catch (error) {
+                formMessage.textContent = error.message;
+                formMessage.className = 'text-sm mt-2 text-red-500';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Rejoindre la Liste d\'Attente';
+                formMessage.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
